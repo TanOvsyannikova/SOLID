@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var saveButton: UIButton!
     
-    var networkService = NetworkService()
+    var networkDataFetcher = NetworkDataFetcher()
     let dataStore = DataStore()
     
     //MARK: - View lifecycle
@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         saveButton.layer.cornerRadius = 10
         
-        networkService.dataFetcher(urlString: "https://www.hackingwithswift.com/samples/friendface.json")
+        networkDataFetcher.dataFetcher(urlString: "https://www.hackingwithswift.com/samples/friendface.json")
     }
     
     
